@@ -1,13 +1,13 @@
 {% set name = "makemake90" %}
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2160d5bc2bf81557dc376676acdf458e52191373f1287e5ef4b67755bef53112
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: d6e169bb13c130eaf212e9c13b118e93e672ecd6762458f7cfed04befc83538a
 
 build:
   entry_points:
