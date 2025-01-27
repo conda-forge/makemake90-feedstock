@@ -14,15 +14,15 @@ build:
     - makemake90 = makemake90:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=2.7
+    - python {{ python_min }}
     - flit-core >=3.4
     - pip
   run:
-    - python >=2.7
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -32,6 +32,7 @@ test:
     - makemake90
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/janberges/makemake90
